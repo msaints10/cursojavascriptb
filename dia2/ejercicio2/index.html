@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de Arrays</title>
+    <script>
+        // Metodos de Arrays
+        // push
+        let arreglo = [1,2,3,4,5,6,7,8,9,10];
+        console.log(arreglo.length);
+        arreglo.push(11);
+        console.log(arreglo.length);
+        // pop
+        let valor_eliminado = arreglo.pop();
+        console.log(arreglo.length);
+        console.log(valor_eliminado);
+        // shift
+        arreglo.shift();
+        console.log(arreglo.length);
+        // unshift
+        arreglo.unshift(1);
+        console.log(arreglo.length);
+        // splice
+        
+        let arreglo2 = [{
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 25
+        },
+        {
+            nombre: "Maria",
+            apellido: "Perez",
+            edad: 22
+        },
+        {
+            nombre: "Pedro",
+            apellido: "Perez",
+            edad: 29
+        }];
+        console.log(arreglo2);
+        arreglo2.splice(1,1);
+        console.log(arreglo2);
+
+        // slice
+        let arreglo3 = [1,2,3,4,5,6,7,8,9,10];
+        console.log(arreglo3);
+        let arreglo4 = arreglo3.slice(2,5);
+        console.log(arreglo4);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

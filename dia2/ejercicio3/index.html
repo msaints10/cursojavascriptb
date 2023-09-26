@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscadores de Array</title>
+    <script>
+      // buscadores de array
+      // find
+      let arreglo = [
+        {
+          nombre: "Juan",
+          apellido: "Perez",
+          edad: 22,
+        },
+        {
+          nombre: "Maria",
+          apellido: "Perez",
+          edad: 22,
+        },
+        {
+          nombre: "Pedro",
+          apellido: "Perez",
+          edad: 22,
+        },
+      ];
+      let resultado = arreglo.find(function (valor, indice, arreglo) {
+        return valor["edad"] == 22;
+      });
+      console.log(resultado);
+      // findIndex
+      let resultado2 = arreglo.findIndex(function (valor, indice, arreglo) {
+        return valor["edad"] == 22;
+      });
+      console.log(resultado2);
+      // filter
+      let resultado3 = arreglo.filter(function (valor, indice, arreglo) {
+        return valor["edad"] == 22;
+      });
+      console.log(resultado3);
+      // includes
+      let arreglo2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let resultado4 = arreglo2.includes(5);
+      console.log(resultado4);
+      // some
+      let resultado5 = arreglo.some(function (valor, indice, arreglo) {
+        return valor["edad"] == 22 && valor["nombre"] == "Maria";
+      });
+      console.log(resultado5);
+      // every
+      let resultado6 = arreglo.every(function (valor, indice, arreglo) {
+        return valor["edad"] == 22;
+      });
+      console.log(resultado6);
+
+      let ejemplo = [
+        {
+          Tipo: "1",
+          Nombre: "ORACLE",
+          Id: "190679",
+          Correlativo: "465956",
+          Nombre_Persona: "SANTOS MENDEZ, MANUEL JOSE",
+          Active: 0,
+        },
+        {
+          Tipo: "2",
+          Nombre: "DOCENTE",
+          Id: "190679",
+          Correlativo: "465956",
+          Nombre_Persona: "SANTOS MENDEZ, MANUEL JOSE",
+          Active: 1,
+        },
+        {
+          Tipo: "11",
+          Nombre: "EVENTOS",
+          Id: "EV17000712",
+          Correlativo: null,
+          Nombre_Persona: "Manuel José Santos Méndez",
+          Active: 0,
+        },
+      ];
+
+      let resultado8 = ejemplo.some((valor, indice, arreglo) => {
+        return valor["Nombre"] == "DOCENTEssss";
+      });
+      if (resultado8) {
+        console.log("existe");
+      } else {
+        console.log("no existe");
+      }
+
+    </script>
+  </head>
+  <body></body>
+</html>

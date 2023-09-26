@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+    <script>
+        // tipos de ciclo
+        // while
+        let valor = 0;
+        while (valor <= 10) {
+            console.log("hola");
+            valor++;
+        }
+        // do while
+        valor = 0;
+        do {
+            console.log("hola");
+            valor++;
+        } while (valor <= 10);
+        // for
+        for (let i = 0; i <= 10; i++) {
+            console.log("hola");
+        }
+        // foreach
+        let arreglo = [1,2,3,4,5,6,7,8,9,10];
+        arreglo.forEach(function(valor, indice, arreglo){
+            console.log(valor);
+        });
+        // for in
+        let persona = {
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 25
+        };
+        for (const propiedad in persona) {
+            console.log(propiedad);
+        }
+        // for of
+        let arreglo2 = [{
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 25
+        },{
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 25
+        },{
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 25
+        }];
+        for (const valor of arreglo2) {
+            console.log(valor);
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
