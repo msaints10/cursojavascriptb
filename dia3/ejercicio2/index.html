@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>mi pagina web</h1>
+    </div>
+    <script>
+        // El DOM en JavaScript
+        // El DOM es una interfaz de programación de aplicaciones (API) para documentos HTML y XML. Define la estructura lógica de los documentos y el modo en que se accede y manipula un documento.
+        console.log(document);
+        console.log(document.head);
+        console.log(document.body);
+
+        // Crear elementos
+        const div = document.createElement("div", {id: "div1", class: "div1"});
+        console.log(div);
+
+        // Añadir elementos
+        document.body.appendChild(div);
+        
+        // Añadir texto
+        const text = document.createTextNode("Hola mundo");
+        div.appendChild(text);
+
+        // Añadir elementos con atributos
+        const div2 = document.createElement("div");
+        div2.setAttribute("id", "div2");
+        div2.setAttribute("class", "div2");
+        document.body.appendChild(div2);
+        
+        // quitar atriburos de un elemento
+        div2.removeAttribute("id");
+
+        
+    </script>
+</body>
+</html>

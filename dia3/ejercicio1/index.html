@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en Javascript</title>
+    <script>
+        // funciones
+        function saludar(){
+            alert("Hola Mundo");
+        }
+        // funciones con parametros
+        function saludar2(nombre, apellido){
+            alert(`Hola  ${nombre == "Manuel" ? "Manuel" : "Desconocido"}`);
+        }
+
+        // funciones con parametros por defecto
+        function saludar3(nombre = "Manuel"){
+            alert(`Hola  ${nombre == "Manuel" ? "Manuel" : "Desconocido"}`);
+        }
+
+        // funciones con retorno
+        function saludar4(nombre = "Manuel"){
+            return `Hola  ${nombre == "Manuel" ? "Manuel" : "Desconocido"}`;
+        }
+
+        function funcion_int() {
+            let numero = 1;
+            return numero;
+            console.log("Hola" + numero);
+            return 0;
+        }
+
+        const numero = funcion_int();
+        console.log(numero);
+
+
+        // funcion con valor random
+        function funcion_random(){
+            return Math.random();
+        }
+
+        // funcion con valor random entre 0 y 9
+        function funcion_random2(){
+            return Math.floor(Math.random() * 10);
+        }
+
+        console.log(funcion_random());
+
+        // funciones anonimas
+        const saludar5 = function(nombre = "Manuel"){
+            return `Hola  ${nombre == "Manuel" ? "Manuel" : "Desconocido"}`;
+        }
+
+        // funciones flecha (anonima)
+        const saludar6 = (nombre = "Manuel") => {
+            let valor = 1 * 5;
+            //
+            // x cantidad de codigo
+            //
+            return `Hola  ${nombre == "Manuel" ? "Manuel" : "Desconocido"}`;
+        }
+
+        // funciones flecha (anonima) con retorno implicito
+        const saludar7 = (nombre = "Manuel") => `Hola  ${nombre == "Manuel" ? "Manuel" : "Desconocido"}`;
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

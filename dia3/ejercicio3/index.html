@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con todas las etiquetas html</title>
+    <style>
+        .clase2 {
+            border-radius: 25px !important;
+            box-shadow: 2px 2px 2px 2px #df0505 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Formulario con todas las etiquetas de formularios html -->
+    <label for="input1">Nombre:</label>
+    <input type="text" id="input1" name="input1" class="hola clase1" disabled placeholder="ingrese su nombre">
+    <br>
+    <label for="input2">Apellido:</label>
+    <input type="text" id="input2" name="input2" placeholder="ingrese su apellido">
+    <br>
+    <label for="input3">Email:</label>
+    <input type="email" id="input3" name="input3" placeholder="ingrese su email">
+    <br>
+    <label for="input4">Contraseña:</label>
+    <input type="password" id="input4" name="input4" placeholder="ingrese su contraseña">
+    <script>
+        // search dom elements
+        const input1 = document.getElementById("input1");
+        input1.removeAttribute("disabled")
+        const input2 = document.getElementById("input2");
+        const input3 = document.getElementById("input3");
+        const input4 = document.getElementById("input4");
+        // add event listener
+        input1.addEventListener("focus", () => {
+            input1.classList.add("clase2");
+            console.log("focus");
+        });
+
+        // cuando dejan de hacer focus
+        input1.addEventListener("blur", () => {
+            input1.classList.remove("clase2");
+            console.log("blur");
+        });
+    </script>
+</body>
+</html>
